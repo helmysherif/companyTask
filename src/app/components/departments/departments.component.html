@@ -1,0 +1,36 @@
+<section class="department-section my-4">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <div class="content d-flex align-items-center">
+                    <div class="title">
+                        <h3>welcome,</h3>
+                        <h1>naif alotaibi</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <img src="../../../assets/imgs/Capture.PNG" width="500" alt="">
+            </div>
+        </div>
+        <p>this is how application sector is performing today</p>
+        <div class="row">
+            <div class="col-lg col-md-6 col-sm-12" *ngFor = 'let dep of allDepartments'>
+                <div class="department-sec">
+                    <div class="department">
+                        <i class = "{{dep.icon}}"></i>
+                        <h2 (click) = "displayDepSection(dep._id)">
+                            {{ dep.name }}
+                        </h2>
+                        <div class="boxes">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<app-sections [departmentSections] = 'sections'></app-sections>
